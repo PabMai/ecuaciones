@@ -8,7 +8,7 @@ import java.util.List;
  *
  */
 public class EcuacionPolinomica implements Ecuacion {
-
+	
 	/**
 	 * Constructor parametrizado
 	 *
@@ -26,10 +26,13 @@ public class EcuacionPolinomica implements Ecuacion {
 	 * f(x) = 1 × x^0 + 0 × x^1 + 2 × x^2 + 1 × x^3 - 1 × x^4
 	 *
 	 */
+	
+	private List<Double> coeficientes;
+	
 	public EcuacionPolinomica(List<Double> coeficientes) {
 
-		throw new RuntimeException("No implementado");
-
+		this.coeficientes = coeficientes;
+		
 	}
 
 	/**
@@ -38,9 +41,18 @@ public class EcuacionPolinomica implements Ecuacion {
 	 * @param x la variable
 	 *
 	 */
+	
 	public Double resolver(Double x) {
 
-		throw new RuntimeException("No implementado");
+		Double resultadoSuma = 0.0;
+		int exp = 0;
+		
+		for (int i = coeficientes.size() -1;i >= 0;i--) {
+			resultadoSuma += coeficientes.get(i)*(Math.pow(x, exp));
+			exp++;
+		}
+		
+		return resultadoSuma;
 
 	}
 

@@ -12,16 +12,24 @@ public class IntegralDeArea {
 	 * de Riemann entre los dos puntos dados.
 	 *
 	 * @param ecuacion
-	 * @param inicio
-	 * @param fin
-	 * @param incremento
+	 * @param inicio -> a
+	 * @param fin -> b 
+	 * @param incremento -> delta
 	 * @return el área bajo la curva
 	 */
 	public Double calcular(Ecuacion ecuacion, Double inicio,
 			Double fin, Double incremento) {
-
-		throw new RuntimeException("No implementado");
-
+		
+		Double suma=0.0;
+		Double x=inicio;		
+		
+		while(x<=fin){
+			suma += ecuacion.resolver(x);
+			x += incremento;
+		}
+		
+		return suma*incremento;
 	}
-
+	
+	
 }

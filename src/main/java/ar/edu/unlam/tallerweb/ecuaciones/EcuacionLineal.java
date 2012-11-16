@@ -13,10 +13,15 @@ public class EcuacionLineal implements Ecuacion {
 	 * @param b la ordenada al orígen
 	 *
 	 */
+	
+	private Double m;
+	private Double b;
+	
 	public EcuacionLineal(Double m, Double b) {
 
-		throw new RuntimeException("No implementado");
-
+		 this.m = m;
+		 this.b = b;
+		 
 	}
 
 	/**
@@ -25,9 +30,14 @@ public class EcuacionLineal implements Ecuacion {
 	 * @param x la variable
 	 *
 	 */
+		
 	public Double resolver(Double x) {
-
-		throw new RuntimeException("No implementado");
+		
+		Double resultado;
+		
+		resultado = m*x+b;
+		
+		return resultado; 
 
 	}
 

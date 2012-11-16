@@ -13,6 +13,7 @@ public interface Ecuacion {
 	 * @param x la variable
 	 *
 	 */
+	
 	Double resolver(Double x);
 
 }

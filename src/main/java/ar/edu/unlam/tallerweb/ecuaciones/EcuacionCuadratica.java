@@ -15,10 +15,16 @@ public class EcuacionCuadratica implements Ecuacion {
 	 * @param c
 	 *
 	 */
+	
+	private Double a;
+	private Double b;
+	private Double c;
+	
 	public EcuacionCuadratica(Double a, Double b, Double c) {
 
-		throw new RuntimeException("No implementado");
-
+		this.a = a;
+		this.b = b;
+		this.c = c;
 	}
 
 	/**
@@ -28,8 +34,12 @@ public class EcuacionCuadratica implements Ecuacion {
 	 *
 	 */
 	public Double resolver(Double x) {
-
-		throw new RuntimeException("No implementado");
+		
+		Double resultado;
+		
+		resultado = a * (Math.pow(x, 2.0)) + b * x + c;
+		
+		return resultado;
 
 	}
 
