@@ -24,7 +24,7 @@ public class IntegralDeArea {
 		Double x=inicio;		
 		
 		while(x<=fin){
-			suma += ecuacion.resolver(x);
+			suma += ecuacion.resolver(Math.abs(x));
 			x += incremento;
 		}
 		
@@ -33,3 +33,4 @@ public class IntegralDeArea {
 	
 	
 }
+
