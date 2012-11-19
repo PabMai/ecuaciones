@@ -1,6 +1,5 @@
 package ar.edu.unlam.tallerweb.ecuaciones;
 
-import ar.edu.unlam.tallerweb.ecuaciones.excepciones.ExcepcionIntervalo;
 
 /**
  * Representa la abstracción del cálculo de la integral bajo

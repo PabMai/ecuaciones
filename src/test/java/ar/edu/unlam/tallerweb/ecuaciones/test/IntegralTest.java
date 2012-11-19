@@ -8,8 +8,8 @@ import ar.edu.unlam.tallerweb.ecuaciones.Ecuacion;
 import ar.edu.unlam.tallerweb.ecuaciones.EcuacionCuadratica;
 import ar.edu.unlam.tallerweb.ecuaciones.EcuacionLineal;
 import ar.edu.unlam.tallerweb.ecuaciones.EcuacionPolinomica;
+import ar.edu.unlam.tallerweb.ecuaciones.ExcepcionIntervalo;
 import ar.edu.unlam.tallerweb.ecuaciones.IntegralDeArea;
-import ar.edu.unlam.tallerweb.ecuaciones.excepciones.ExcepcionIntervalo;
 
 /**
  * Agregue los tests que considere necesarios. Se proporciona un test a modo de
