@@ -2,18 +2,17 @@ package ar.edu.unlam.tallerweb.ecuaciones;
 
 /**
  * Abstracción que representa todo tipo de ecuación con
- * una incógnita
+ * una incógnita.
  *
  */
 public interface Ecuacion {
 
 	/**
-	 * Devuelve el resultado de evaluar f(x)
+	 * Devuelve el resultado de evaluar f(x).
 	 *
-	 * @param x la variable
-	 *
+	 * @param x la variable.
+	 * @return the double
 	 */
-	
 	Double resolver(Double x);
 
 }
