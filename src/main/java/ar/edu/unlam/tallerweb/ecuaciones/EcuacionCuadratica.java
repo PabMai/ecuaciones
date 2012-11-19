@@ -7,16 +7,19 @@ package ar.edu.unlam.tallerweb.ecuaciones;
  */
 public class EcuacionCuadratica implements Ecuacion {
 
-	/** @param a Coeficiente a. */
+	/** @param a coeficiente a. */
 	private Double a;
 
-	/** @param b Coeficiente b. */
+	/** @param b coeficiente b. */
 	private Double b;
 
-	/** @param c Coeficiente c. */
+	/** @param c coeficiente c. */
 	private Double c;
 
-	/** Constructor parametrizado.*/
+	/** Constructor parametrizado.
+	 *  @param a coeficiente a de la ecuancion cuadratica
+	 *  @param b coeficiente b de la ecuancion cuadratica
+	 *  @param c coeficiente c de la ecuancion cuadratica*/
 	public EcuacionCuadratica(final Double a,
 			final Double b, final Double c) {
 
@@ -27,10 +30,10 @@ public class EcuacionCuadratica implements Ecuacion {
 	}
 
 	/**
- * Devuelve el resultado de evaluar f(x).
+    * Devuelve el resultado de evaluar f(x).
 	*
 	* @param x la variable
-	* @return the double
+	* @return resultado el resultado
 	*/
 	public final Double resolver(final Double x) {
 

@@ -7,14 +7,17 @@ package ar.edu.unlam.tallerweb.ecuaciones;
 public class EcuacionLineal implements Ecuacion {
 
 	/** @param m es la pendiente */
-	private Double m;
+	private Double m = 0.0;
 	/** @param b es la ordenada al origen */
-	private Double b;
-	/** Constructor parametrizado. */
+	private Double b = 0.0;
+
+	/** Constructor parametrizado.
+	* @param m es la pendiente
+	* @param b es la ordenada al origen */
 	public EcuacionLineal(final Double m, final Double b) {
 
-		 this.m = m;
-		 this.b = b;
+		this.m = m;
+		this.b = b;
 	}
 
 	/**

@@ -9,13 +9,12 @@ import java.util.List;
  */
 public class EcuacionPolinomica implements Ecuacion {
 
-	/** Constructor parametrizado. */
+	/** @param coeficientes son los coeficientes del polinomio*/
 	private List<Double> coeficientes;
 
-	/**
-	 * Instantiates a new ecuacion polinomica.
+	/** Constructor parametrizado.
 	 *
-	 * @param coeficientes the coeficientes
+	 * @param coeficientes son los coeficientes del polinomio
 	 */
 	public EcuacionPolinomica(final List<Double> coeficientes) {
 

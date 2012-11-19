@@ -17,7 +17,7 @@ import ar.edu.unlam.tallerweb.ecuaciones.EcuacionPolinomica;
 public class EcuacionTest {
 	/**
 	 * Verifica el resultado de una ecuacion lineal en el
-	 * primer cuadrante
+	 * primer cuadrante.
 	 *
 	 */
 	@Test
@@ -25,7 +25,7 @@ public class EcuacionTest {
 
 		Ecuacion ecuacion = new EcuacionLineal(2.0, 5.0);
 
-		Double precision = 0.1;
+		Double precision = 0.0001;
 		Double resultadoEsperado = 11.0;
 		Assert.assertEquals(
 				"Se espera que el resultado sea 11",
@@ -35,7 +35,7 @@ public class EcuacionTest {
 	}
 	/**
 	 * Verifica el resultado de una ecuacion cuadratica en el
-	 * primer cuadrante
+	 * primer cuadrante.
 	 *
 	 */
 	@Test
@@ -43,7 +43,7 @@ public class EcuacionTest {
 
 		Ecuacion ecuacion = new EcuacionCuadratica(1.0, 3.0, 2.0);
 
-		Double precision = 0.1;
+		Double precision = 0.0001;
 		Double resultadoEsperado = 12.0;
 		Assert.assertEquals("Se espera que el resultado sea 12",
 				ecuacion.resolver(2.0), resultadoEsperado,
@@ -60,7 +60,7 @@ public class EcuacionTest {
 
 		Ecuacion ecuacion = new EcuacionCuadratica(2.0, 3.0, 1.0);
 
-		Double precision = 0.1;
+		Double precision = 0.0001;
 		Double resultadoEsperado = 15.0;
 		Assert.assertEquals("Se espera que el resultado sea 15",
 				ecuacion.resolver(2.0), resultadoEsperado,
@@ -68,7 +68,7 @@ public class EcuacionTest {
 
 	}
 	/**
-	 * Verifica el resultado de una ecuacion polinomica de 
+	 * Verifica el resultado de una ecuacion polinomica de
 	 * grado 2.
 	 *
 	 */
@@ -79,7 +79,7 @@ public class EcuacionTest {
 				new EcuacionPolinomica(Arrays.asList(
 					new Double[] {2.0, 3.0, 1.0}));
 
-		Double precision = 0.1;
+		Double precision = 0.0001;
 		Double resultadoEsperado = 15.0;
 		Assert.assertEquals("Se espera que el resultado sea 15",
 				ecuacion.resolver(-3.5), resultadoEsperado,
@@ -98,7 +98,7 @@ public class EcuacionTest {
 				new EcuacionPolinomica(Arrays.asList(
 					new Double[] {2.0, 2.0, 4.0, 1.0}));
 
-		Double precision = 0.1;
+		Double precision = 0.0001;
 		Double resultadoEsperado = 9.0;
 		Assert.assertEquals("Se espera que el resultado sea 9.0",
 				ecuacion.resolver(1.0), resultadoEsperado,
@@ -118,7 +118,7 @@ public class EcuacionTest {
 					new Double[] {1.0, 4.0, 1.0, 3.0,
 						2.0}));
 
-		Double precision = 0.1;
+		Double precision = 0.0001;
 		Double resultadoEsperado = 4.3125;
 		Assert.assertEquals("Se espera que el resultado sea 29.5625",
 				ecuacion.resolver(0.5), resultadoEsperado,
@@ -138,7 +138,7 @@ public class EcuacionTest {
 					new Double[] {1.0, 2.0, 4.0, 1.0, 3.0,
 							1.0}));
 
-		Double precision = 0.1;
+		Double precision = 0.0001;
 		Double resultadoEsperado = 12.0;
 		Assert.assertEquals("Se espera que el resultado sea 29.5625",
 				ecuacion.resolver(1.0), resultadoEsperado,
@@ -146,8 +146,8 @@ public class EcuacionTest {
 
 	}
 	/**
-	 * Verifica el resultado de un caso especial, calcula una ecuacion lineal con
-	 * la clase ecuacion polinomica.
+	 * Verifica el resultado de un caso especial, calcula una ecuacion
+	 * lineal con la clase ecuacion polinomica.
 	 *
 	 */
 	@Test
@@ -157,10 +157,10 @@ public class EcuacionTest {
 				new EcuacionPolinomica(Arrays.asList(
 					new Double[] {2.0, 5.0}));
 
-		Double precision = 0.1;
-		Double resultadoEsperado = 9.0;
+		Double precision = 0.0001;
+		Double resultadoEsperado = 1.5;
 		Assert.assertEquals("Se espera que el resultado sea 9",
-				ecuacion.resolver(2.0), resultadoEsperado,
+				ecuacion.resolver(-1.75), resultadoEsperado,
 				precision);
 
 	}

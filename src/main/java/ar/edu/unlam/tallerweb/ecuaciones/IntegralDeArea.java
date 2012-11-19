@@ -12,10 +12,10 @@ public class IntegralDeArea {
 	 * Calcula el área bajo la curva, utilizando el método de las sumas
 	 * de Riemann entre los dos puntos dados.
 	 *
-	 * @param ecuacion the ecuacion
-	 * @param inicio -> a
-	 * @param fin -> b
-	 * @param incremento -> delta
+	 * @param ecuacion el objeto ecuacion
+	 * @param inicio inicio del intervalo
+	 * @param fin fin del intervalo
+	 * @param incremento incremento del intervalo
 	 * @return el área bajo la curva
 	 * @throws ExcepcionIntervalo the excepcion intervalo
 	 */
