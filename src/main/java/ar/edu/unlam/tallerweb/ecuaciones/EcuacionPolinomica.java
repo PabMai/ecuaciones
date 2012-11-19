@@ -29,7 +29,7 @@ public class EcuacionPolinomica implements Ecuacion {
 	 * @return resultadoSuma resultado de la sumatoria
 	 *
 	 */
-	public Double resolver(final Double x) {
+	public final Double resolver(final Double x) {
 
 		Double resultadoSuma = 0.0;
 		int exp = 0;

@@ -7,24 +7,18 @@ package ar.edu.unlam.tallerweb.ecuaciones;
  */
 public class EcuacionCuadratica implements Ecuacion {
 
-	/** Constructor parametrizado.*/
+	/** @param a Coeficiente a. */
 	private Double a;
 
-	/** The b. */
+	/** @param b Coeficiente b. */
 	private Double b;
 
-	/** The c. */
+	/** @param c Coeficiente c. */
 	private Double c;
 
-	/**
-	 * Instantiates a new ecuacion cuadratica.
-	 *
-	 * @param a the a
-	 * @param b the b
-	 * @param c the c
-	 */
-
-	public EcuacionCuadratica(final Double a, final Double b, final Double c) {
+	/** Constructor parametrizado.*/
+	public EcuacionCuadratica(final Double a,
+			final Double b, final Double c) {
 
 		this.a = a;
 		this.b = b;
@@ -38,7 +32,7 @@ public class EcuacionCuadratica implements Ecuacion {
 	* @param x la variable
 	* @return the double
 	*/
-	public Double resolver(final Double x) {
+	public final Double resolver(final Double x) {
 
 	Double resultado;
 	resultado = a * (Math.pow(x, 2.0)) + b * x + c;

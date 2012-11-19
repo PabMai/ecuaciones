@@ -22,7 +22,7 @@ public class IntegralTest {
 	 *
 	 */
 	@Test
-	public void areaBajoLaIdentidadEcuacionLinealVer1()
+	public final void areaBajoLaIdentidadEcuacionLinealVer1()
 			throws ExcepcionIntervalo {
 
 		Ecuacion ecuacion = new EcuacionLineal(2.0, 5.0);
@@ -30,11 +30,13 @@ public class IntegralTest {
 
 		Double incremento = 0.0001;
 		Double areaObtenida =
-				integral.calcular(ecuacion, 0.0, 3.0, incremento);
+				integral.calcular(ecuacion, 0.0, 3.0,
+						incremento);
 		Double precision = 0.1;
 		Double areaEsperada = 24.0;
 		Assert.assertEquals(
-				"Se espera que el Area bajo la recta identidad entre 0 y 3 sea 24",
+				"Se espera que el Area bajo la recta "
+				+ "identidad entre 0 y 3 sea 24",
 				areaObtenida, areaEsperada, precision);
 	}
 	/**
@@ -42,19 +44,21 @@ public class IntegralTest {
 	 *
 	 */
 	@Test
-	public void areaBajoLaIdentidadEcuacionLinealVer2()
+	public final void areaBajoLaIdentidadEcuacionLinealVer2()
 			throws ExcepcionIntervalo {
 
 		Ecuacion ecuacion = new EcuacionLineal(1.0, 0.0);
 		IntegralDeArea integral = new IntegralDeArea();
 
 		Double incremento = 0.0001;
-		Double areaObtenida = integral.calcular(ecuacion, -3.0, 3.0, incremento);
+		Double areaObtenida = integral.calcular(ecuacion, -3.0, 3.0,
+				incremento);
 		Double precision = 0.1;
 		Double areaEsperada = 9.0;
 		Assert.assertEquals(
-				"Se espera que el Area bajo la recta identidad entre -3 y 3 sea 9",
-				areaObtenida,areaEsperada,precision);
+				"Se espera que el Area bajo la recta " +
+				"identidad entre -3 y 3 sea 9",
+				areaObtenida, areaEsperada, precision);
 
 	}
 	/**
@@ -63,7 +67,7 @@ public class IntegralTest {
 	 *
 	 */
 	@Test
-	public void areaBajoLaIdentidadEcuacionCuadratica()
+	public final void areaBajoLaIdentidadEcuacionCuadratica()
 			throws ExcepcionIntervalo {
 
 		Ecuacion ecuacion = new EcuacionCuadratica(1.0, 3.0, 2.0);
@@ -71,12 +75,14 @@ public class IntegralTest {
 
 		Double incremento = 0.0001;
 		Double areaObtenida =
-				integral.calcular(ecuacion, 1.0, 5.0, incremento);
+				integral.calcular(ecuacion, 1.0, 5.0,
+						incremento);
 		Double precision = 0.1;
 		Double areaEsperada = 85.3;
 		Assert.assertEquals(
-				"Se espera que el Area bajo la recta identidad entre 1 y 5 sea 85.3",
-				areaObtenida,areaEsperada,precision);
+				"Se espera que el Area bajo la recta "
+				+ "identidad entre 1 y 5 sea 85.3",
+				areaObtenida, areaEsperada, precision);
 
 	}
 	/**
@@ -90,16 +96,21 @@ public class IntegralTest {
 
 		Ecuacion ecuacion =
 				new EcuacionPolinomica(Arrays.asList(
-						new Double[] {1.0, 4.0, 1.0, 3.0, 2.0}));
+						new Double[] {1.0, 4.0, 1.0,
+								3.0, 2.0}));
+
 		IntegralDeArea integral = new IntegralDeArea();
 
 		Double incremento = 0.0001;
-		Double areaObtenida = integral.calcular(ecuacion, 2.0, 3.0, incremento);
+		Double areaObtenida = integral.calcular(ecuacion, 2.0, 3.0,
+								incremento);
 		Double precision = 0.1;
 		Double areaEsperada = 123.033;
 		Assert.assertEquals(
-				"Se espera que el área bajo la recta identidad entre 2 y 3 sea 123.033",
-				areaObtenida,areaEsperada,precision);
+				"Se espera que el área bajo la recta"
+						 + " identidad entre 2 y 3 sea"
+						 + " 123.033",
+				areaObtenida, areaEsperada, precision);
 	}
 	/**
 	 * Verifica que el area de la ecuacion polinomica de grado 5
@@ -107,22 +118,26 @@ public class IntegralTest {
 	 *
 	 */
 	@Test
-	public void areaBajoLaIdentidadEcuacionPolinomicaGrado5()
+	public final void areaBajoLaIdentidadEcuacionPolinomicaGrado5()
 			throws ExcepcionIntervalo {
 
 		Ecuacion ecuacion =
 				new EcuacionPolinomica(Arrays.asList(
-						new Double[] {1.0, 2.0, 4.0, 1.0, 3.0, 1.0}));
+						new Double[] {1.0, 2.0, 4.0,
+							1.0, 3.0, 1.0}));
+		
 		IntegralDeArea integral = new IntegralDeArea();
 
 		Double incremento = 0.0001;
 		Double areaObtenida =
-				integral.calcular(ecuacion, 2.0, 3.0, incremento);
+				integral.calcular(ecuacion, 2.0, 3.0,
+						incremento);
 		Double precision = 0.1;
 		Double areaEsperada = 275.067;
 		Assert.assertEquals(
-				"Se espera que el área bajo la recta identidad entre 2 y 3 sea 275.067",
-				areaObtenida,areaEsperada,precision);
+				"Se espera que el área bajo la recta "
+				+ "identidad entre 2 y 3 sea 275.067",
+				areaObtenida, areaEsperada, precision);
 	}
 	/**
 	 * Verifica el caso especial, calculando una ecuacion lineal
@@ -130,7 +145,7 @@ public class IntegralTest {
 	 *
 	 */
 	@Test
-	public void areaBajoLaIdentidadEcuacionPolinomicaCasoEspecial()
+	public final void areaBajoLaIdentidadEcuacionPolinomicaCasoEspecial()
 			throws ExcepcionIntervalo {
 
 		Ecuacion ecuacion =
@@ -140,12 +155,15 @@ public class IntegralTest {
 
 		Double incremento = 0.0001;
 		Double areaObtenida =
-				integral.calcular(ecuacion, 0.0, 3.0, incremento);
+				integral.calcular(ecuacion, 0.0, 3.0,
+						 incremento);
+
 		Double precision = 0.1;
 		Double areaEsperada = 9.0;
 		Assert.assertEquals(
-				"Se espera que el área bajo la recta identidad entre 0 y 3 sea 9",
-				areaObtenida,areaEsperada,precision);
+				"Se espera que el área bajo la recta "
+				+ "identidad entre 0 y 3 sea 9",
+				areaObtenida, areaEsperada, precision);
 
 	}
 	/**
@@ -153,7 +171,7 @@ public class IntegralTest {
 	 *
 	 */
 	@Test(expected = ExcepcionIntervalo.class)
-	public void areaBajoLaIdentidadEcuacionLinealExcepcion()
+	public final void areaBajoLaIdentidadEcuacionLinealExcepcion()
 			throws ExcepcionIntervalo {
 
 		Ecuacion ecuacion = new EcuacionLineal(2.0, 5.0);
@@ -161,11 +179,13 @@ public class IntegralTest {
 
 		Double incremento = 0.0001;
 		Double areaObtenida =
-				integral.calcular(ecuacion, 3.0, 0.0, incremento);
+				integral.calcular(ecuacion, 3.0, 0.0,
+						incremento);
 		Double precision = 0.1;
 		Double areaEsperada = 24.0;
 		Assert.assertEquals(
-				"Se espera que el Area bajo la recta identidad entre 0 y 3 sea 24",
+				"Se espera que el Area bajo la recta identidad "
+				+ "entre 0 y 3 sea 24",
 				areaObtenida, areaEsperada, precision);
 	}
 

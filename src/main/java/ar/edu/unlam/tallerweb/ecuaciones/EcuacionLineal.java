@@ -6,12 +6,11 @@ package ar.edu.unlam.tallerweb.ecuaciones;
  */
 public class EcuacionLineal implements Ecuacion {
 
-	/** Constructor parametrizado. */
 	/** @param m es la pendiente */
 	private Double m;
-	/** @param b la ordenada al origen */
+	/** @param b es la ordenada al origen */
 	private Double b;
-
+	/** Constructor parametrizado. */
 	public EcuacionLineal(final Double m, final Double b) {
 
 		 this.m = m;
@@ -24,7 +23,7 @@ public class EcuacionLineal implements Ecuacion {
 	 * @param x es la variable incognita.
 	 * @return resultado es el resultado de evaluar f(x).
 	 */
-	public Double resolver(final Double x) {
+	public final Double resolver(final Double x) {
 
 		Double resultado;
 

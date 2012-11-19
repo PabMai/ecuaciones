@@ -19,8 +19,9 @@ public class IntegralDeArea {
 	 * @return el área bajo la curva
 	 * @throws ExcepcionIntervalo the excepcion intervalo
 	 */
-	public Double calcular(final Ecuacion ecuacion, final Double inicio,
-			final Double fin, final Double incremento)
+	public final Double calcular(final Ecuacion ecuacion,
+			final Double inicio, final Double fin,
+			final Double incremento)
 			throws  ExcepcionIntervalo {
 
 		if (inicio > fin) {
