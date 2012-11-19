@@ -148,5 +148,25 @@ public class IntegralTest {
 				areaObtenida,areaEsperada,precision);
 
 	}
+	/**
+	 * Verifica que la excepcion se produzca
+	 *
+	 */
+	@Test(expected = ExcepcionIntervalo.class)
+	public void areaBajoLaIdentidadEcuacionLinealExcepcion()
+			throws ExcepcionIntervalo {
+
+		Ecuacion ecuacion = new EcuacionLineal(2.0, 5.0);
+		IntegralDeArea integral = new IntegralDeArea();
+
+		Double incremento = 0.0001;
+		Double areaObtenida =
+				integral.calcular(ecuacion, 3.0, 0.0, incremento);
+		Double precision = 0.1;
+		Double areaEsperada = 24.0;
+		Assert.assertEquals(
+				"Se espera que el Area bajo la recta identidad entre 0 y 3 sea 24",
+				areaObtenida, areaEsperada, precision);
+	}
 
 }
